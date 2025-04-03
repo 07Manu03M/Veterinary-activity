@@ -30,7 +30,7 @@ function SchearPet (){
         let animal = mascotas.find(m => m.nombre.toLowerCase() === nombre.toLocaleLowerCase())
 
         if (animal) {
-            alert(`Mascota encontrada:\nnombre: ${animal.nombre}, Especie: ${animal.especie}, Edad: ${animal.edad}, Peso: ${animal.peso}kg, Estado: ${animal.estado}`)
+            alert(`Mascota encontrada:\nnombre: ${animal.nombre}, Especie: ${animal.especie}, Edad: ${animal.edad}, Peso: ${animal.peso}kg, Estado: ${animal.estadosalud}`)
         }else{
             alert("Mascota no encontrada, lo siento :c")
         }
