@@ -1,8 +1,7 @@
 let mascotas = JSON.parse(localStorage.getItem("mascotas")) || [];
 
 function NewPet (callback){
-    setTimeout(() => {
-        let nombre = prompt("Ingrese el nombre de la nueva mascota: ")
+    let nombre = prompt("Ingrese el nombre de la nueva mascota: ")
         let especie = prompt("Ingrese la especie de la mascota: ")
         let edad = prompt("Ingrese la edad de la mascota: ")
         let peso = prompt("Ingrese el peso de la mascota: ")
@@ -12,7 +11,6 @@ function NewPet (callback){
         localStorage.setItem("mascotas", JSON.stringify(mascotas));
         alert("Mascota Registrada :)")
         if (callback) callback();
-    }, 2000);
 }
 
 function ListPet (){
@@ -28,8 +26,7 @@ function ListPet (){
 }
 
 function SchearPet (){
-    setTimeout(() => {
-        let nombre = prompt("Ingrese el nombre de la mascota que busca")
+    let nombre = prompt("Ingrese el nombre de la mascota que busca")
         let animal = mascotas.find(m => m.nombre.toLowerCase() === nombre.toLocaleLowerCase())
 
         if (animal) {
@@ -37,12 +34,10 @@ function SchearPet (){
         }else{
             alert("Mascota no encontrada, lo siento :c")
         }
-    }, 3000);
 }
 
 function UpdatePet(){
-    setTimeout(() => {
-        let nombre = prompt("Ingrese el nombre de la mascota a actualizar")
+    let nombre = prompt("Ingrese el nombre de la mascota a actualizar")
         let mascota = mascotas.find(m => m.nombre.toLowerCase() === nombre.toLocaleLowerCase())
 
         if (mascota){
@@ -52,7 +47,6 @@ function UpdatePet(){
         }else{
             alert("perdon pero la mascota no se encuentra :C")
         }
-    }, 3000);
 }
 
 function DeletePet (){
